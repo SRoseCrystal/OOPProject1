@@ -1,0 +1,9 @@
+C:\Users\computing\Documents\GitHub\OOPProject1\GUI\GUIMainFile\GUI\GUI\bin\Debug\GUI.exe.config
+C:\Users\computing\Documents\GitHub\OOPProject1\GUI\GUIMainFile\GUI\GUI\bin\Debug\GUI.exe
+C:\Users\computing\Documents\GitHub\OOPProject1\GUI\GUIMainFile\GUI\GUI\bin\Debug\GUI.pdb
+C:\Users\computing\Documents\GitHub\OOPProject1\GUI\GUIMainFile\GUI\GUI\obj\Debug\GUI.csprojAssemblyReference.cache
+C:\Users\computing\Documents\GitHub\OOPProject1\GUI\GUIMainFile\GUI\GUI\obj\Debug\GUI.Form1.resources
+C:\Users\computing\Documents\GitHub\OOPProject1\GUI\GUIMainFile\GUI\GUI\obj\Debug\GUI.Properties.Resources.resources
+C:\Users\computing\Documents\GitHub\OOPProject1\GUI\GUIMainFile\GUI\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+C:\Users\computing\Documents\GitHub\OOPProject1\GUI\GUIMainFile\GUI\GUI\obj\Debug\GUI.exe
+C:\Users\computing\Documents\GitHub\OOPProject1\GUI\GUIMainFile\GUI\GUI\obj\Debug\GUI.pdb
