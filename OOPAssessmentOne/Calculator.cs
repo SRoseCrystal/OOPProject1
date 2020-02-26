@@ -49,7 +49,7 @@ namespace OOPAssessmentOne
         int totalPop = 0;
         foreach (CountryPop x in country)
         {
-            if (x.GetVote()) // Iterates through the Country array checking if the vote it false. 
+            if (!x.GetVote()) // Iterates through the Country array checking if the vote it false. 
             {
                 totalPop += countryPop;
             }
