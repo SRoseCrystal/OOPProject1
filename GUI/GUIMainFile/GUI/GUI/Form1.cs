@@ -11,7 +11,7 @@ using System.Windows.Forms;
 using System.IO;
 using Newtonsoft.Json;
 
-namespace GUI
+namespace Main
 {
     public partial class Form1 : Form
     {
@@ -21,23 +21,19 @@ namespace GUI
             InitializeComponent();
         }
 
-        ///private DataTable LoadJson()
-        ///{
-        ///using (StreamReader file = new StreamReader("..."))
-        /// {
-        ///using jsonFile = file.ReadToEnd();
-        /// DataSet countryList = JsonConvert.DeserializeObject<DataSet>(jsonFile);
-        /// DataTable countryTable = countryList.Tables("Countries");
-        ///return countryTable;
-        ///}
-        ///}
+        private DataTable LoadTable()
+        {
+        DataSet countryList = countries
+        DataTable countryTable = countryList.Tables("Countries");
+        return countryTable;
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
             Text = "EU Council Voting Calculator";
-            int countryNumber = 28;
+            int countryNumber = 27;
             int nameandvote = 2;
             int countrynumber = 0;
-            DataTable file = LoadJson();
+            DataTable file = LoadTable();
             InitTable(tablePanel, countryNumber, nameandvote);
             LoadRules();
             LoadResult();
@@ -60,7 +56,7 @@ namespace GUI
             // 
             // Form1
             // 
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(1141, 521);
             this.Name = "Form1";
             this.ResumeLayout(false);
 

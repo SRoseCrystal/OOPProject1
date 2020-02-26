@@ -1,9 +1,9 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
 
-namespace GUI
+namespace Main
 {
-    public partial class Form1 
+    public partial class Form1
     {
         /// <summary>
         /// Required designer variable.
@@ -19,15 +19,20 @@ namespace GUI
         {
             this.tablePanel = new System.Windows.Forms.TableLayoutPanel();
             this.tablePanel.AutoScroll = true;
-            this.tablePanel.BackColor = System.Drawing.Color.Black;
+            this.tablePanel.BackColor = System.Drawing.Color.White;
             this.tablePanel.Location = new System.Drawing.Point(10, 20);
             this.tablePanel.Name = "tablePanel";
             this.tablePanel.Size = new System.Drawing.Size(800, 600);
 
 
         }
-        private void InitTable(object tablePanel, int countryNumber, int nameandvote)
+        private void InitTable(TableLayoutPanel panel, int countryNumber, int nameandvote)
         {
+            panel.ColumnCount = countryNumber;
+            panel.RowCount = nameandvote;
+            panel.RowStyles.Clear
+
+
 
         }
 
@@ -106,7 +111,7 @@ namespace GUI
             noButton.Name = country;
             noButton.Text = "Abstain";
             noButton.Anchor = AnchorStyles.Right;
-            
+
 
             guiPanel.Controls.Add(yesButton);
             guiPanel.Controls.Add(abstainButton);
@@ -118,8 +123,11 @@ namespace GUI
         {
             Panel guiPanel = new Panel()
             {
+                Margin = new System.Windows.Forms.Padding(),
+                Dock = System.Windows.Forms.DockStyle.Fill
+            };
+            foreach countrynumber(){ }
 
-            }
         }
 
 
