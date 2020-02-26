@@ -53,6 +53,7 @@ namespace GUI
             }
         }
 
+
         private void InitializeComponent()
         {
             this.SuspendLayout();

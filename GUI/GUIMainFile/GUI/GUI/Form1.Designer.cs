@@ -26,7 +26,7 @@ namespace GUI
 
 
         }
-        private void InitTable(TableLayoutPanel t, int v, int countrynumber)
+        private void InitTable(object tablePanel, int countryNumber, int nameandvote)
         {
 
         }
