@@ -14,6 +14,23 @@ namespace GUI
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// 
+        private void InitComp()
+        {
+            this.tablePanel = new System.Windows.Forms.TableLayoutPanel();
+            this.tablePanel.AutoScroll = true;
+            this.tablePanel.BackColor = System.Drawing.Color.Black;
+            this.tablePanel.Location = new System.Drawing.Point(10, 20);
+            this.tablePanel.Name = "tablePanel";
+            this.tablePanel.Size = new System.Drawing.Size(800, 600);
+
+
+        }
+        private void InitTable(TableLayoutPanel t, int v, int countrynumber)
+        {
+
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -26,15 +43,45 @@ namespace GUI
         {
             Panel guiPanel = new Panel()
             {
+                Margin = new System.Windows.Forms.Padding(),
+                Dock = System.Windows.Forms.DockStyle.Fill
+            };
+            RadioButton unaminityButton = new RadioButton();
+            unaminityButton.Name = "Unaminity";
+            unaminityButton.Text = "Unaminity";
+            unaminityButton.Anchor = AnchorStyles.Left;
 
-            }
+            RadioButton smajorityButton = new RadioButton();
+            smajorityButton.Name = "Simple Majority";
+            smajorityButton.Text = "Simple Majority";
+            smajorityButton.Anchor = AnchorStyles.Left;
+
+            RadioButton qmajorityButton = new RadioButton();
+            qmajorityButton.Name = "Qualified Majority";
+            qmajorityButton.Text = "Qualified Majority";
+            qmajorityButton.Anchor = AnchorStyles.Left;
+
+            guiPanel.Controls.Add(unaminityButton);
+            guiPanel.Controls.Add(smajorityButton);
+            guiPanel.Controls.Add(qmajorityButton);
+            tablePanel.Controls.Add(guiPanel);
+
         }
         private void LoadResult()
         {
             Panel guiPanel = new Panel()
             {
+                Margin = new System.Windows.Forms.Padding(),
+                Dock = System.Windows.Forms.DockStyle.Fill
+            };
+            Label resultBox = new Label();
+            resultBox.Name = "...";
+            resultBox.Text = "Result";
+            resultBox.Anchor = AnchorStyles.Bottom;
 
-            }
+            guiPanel.Controls.Add(resultBox);
+            tablePanel.Controls.Add(guiPanel);
+
         }
         private void LoadButtons(string country, int v, int countrynumber)
         {
@@ -43,20 +90,20 @@ namespace GUI
                 Margin = new System.Windows.Forms.Padding(),
                 Dock = System.Windows.Forms.DockStyle.Fill
             };
-            ExtendedRadio yesButton = new ExtendedRadio();
-            yesButton.ButtonName = country;
+            RadioButton yesButton = new RadioButton();
+            yesButton.Name = country;
             yesButton.Text = "Yes";
             yesButton.Anchor = AnchorStyles.Left;
-            
 
-            ExtendedRadio abstainButton = new ExtendedRadio();
-            abstainButton.ButtonName = country;
+
+            RadioButton abstainButton = new RadioButton();
+            abstainButton.Name = country;
             abstainButton.Text = "Abstain";
             abstainButton.Anchor = AnchorStyles.None;
             abstainButton.Location = new Point(guiPanel.Location.X = guiPanel.Width / 3);
 
-            ExtendedRadio noButton = new ExtendedRadio();
-            noButton.ButtonName = country;
+            RadioButton noButton = new RadioButton();
+            noButton.Name = country;
             noButton.Text = "Abstain";
             noButton.Anchor = AnchorStyles.Right;
             
@@ -64,7 +111,7 @@ namespace GUI
             guiPanel.Controls.Add(yesButton);
             guiPanel.Controls.Add(abstainButton);
             guiPanel.Controls.Add(noButton);
-            tablePanel
+            tablePanel.Controls.Add(guiPanel, v, countrynumber);
 
         }
         private void LoadCountry(string country, int v, int countrynumber)
