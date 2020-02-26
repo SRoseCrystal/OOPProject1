@@ -21,16 +21,16 @@ namespace GUI
             InitializeComponent();
         }
 
-        private DataTable LoadJson()
-        {
-            using (StreamReader file = new StreamReader("..."))
-            {
-                using jsonFile = file.ReadToEnd();
-                DataSet countryList = JsonConvert.DeserializeObject<DataSet>(jsonFile);
-                DataTable countryTable = countryList.Tables("Countries");
-                return countryTable;
-            }
-        }
+        ///private DataTable LoadJson()
+        ///{
+        ///using (StreamReader file = new StreamReader("..."))
+        /// {
+        ///using jsonFile = file.ReadToEnd();
+        /// DataSet countryList = JsonConvert.DeserializeObject<DataSet>(jsonFile);
+        /// DataTable countryTable = countryList.Tables("Countries");
+        ///return countryTable;
+        ///}
+        ///}
         private void Form1_Load(object sender, EventArgs e)
         {
             Text = "EU Council Voting Calculator";
@@ -38,17 +38,21 @@ namespace GUI
             int nameandvote = 2;
             int countrynumber = 0;
             DataTable file = LoadJson();
-            InitTable(tableLayoutPanel1, countryNumber, nameandvote);
+            InitTable(tablePanel, countryNumber, nameandvote);
+            LoadRules();
+            LoadResult();
             foreach(DataRow dataRow in file.Rows)
             {
                 string country = dataflow["name"].ToString();
                 if(countrynumber < countryNumber)
                 {
-                    LoadName(country, 0, countrynumber);
+                    LoadCountry(country, 0, countrynumber);
                     LoadButtons(country, 1, countrynumber);
                     countrynumber++;
                 }
             }
         }
+
+        
     }
 }

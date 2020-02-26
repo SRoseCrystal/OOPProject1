@@ -1,6 +1,9 @@
-﻿namespace GUI
+﻿using System.Drawing;
+using System.Windows.Forms;
+
+namespace GUI
 {
-    partial class Form1
+    public partial class Form1 
     {
         /// <summary>
         /// Required designer variable.
@@ -19,135 +22,60 @@
             }
             base.Dispose(disposing);
         }
-
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
-        private void InitializeComponent()
+        private void LoadRules()
         {
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.SuspendLayout();
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(338, 74);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(80, 17);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(424, 74);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(80, 17);
-            this.checkBox2.TabIndex = 1;
-            this.checkBox2.Text = "checkBox2";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(510, 74);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(80, 17);
-            this.checkBox3.TabIndex = 2;
-            this.checkBox3.Text = "checkBox3";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(209, 74);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "label1";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(209, 129);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "label2";
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(338, 128);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(80, 17);
-            this.checkBox4.TabIndex = 5;
-            this.checkBox4.Text = "checkBox4";
-            this.checkBox4.UseVisualStyleBackColor = true;
-            // 
-            // checkBox5
-            // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(424, 129);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(80, 17);
-            this.checkBox5.TabIndex = 6;
-            this.checkBox5.Text = "checkBox5";
-            this.checkBox5.UseVisualStyleBackColor = true;
-            // 
-            // checkBox6
-            // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(510, 129);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(80, 17);
-            this.checkBox6.TabIndex = 7;
-            this.checkBox6.Text = "checkBox6";
-            this.checkBox6.UseVisualStyleBackColor = true;
-            // 
-            // Form1
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1066, 658);
-            this.Controls.Add(this.checkBox6);
-            this.Controls.Add(this.checkBox5);
-            this.Controls.Add(this.checkBox4);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            Panel guiPanel = new Panel()
+            {
+
+            }
+        }
+        private void LoadResult()
+        {
+            Panel guiPanel = new Panel()
+            {
+
+            }
+        }
+        private void LoadButtons(string country, int v, int countrynumber)
+        {
+            Panel guiPanel = new Panel()
+            {
+                Margin = new System.Windows.Forms.Padding(),
+                Dock = System.Windows.Forms.DockStyle.Fill
+            };
+            ExtendedRadio yesButton = new ExtendedRadio();
+            yesButton.ButtonName = country;
+            yesButton.Text = "Yes";
+            yesButton.Anchor = AnchorStyles.Left;
+            
+
+            ExtendedRadio abstainButton = new ExtendedRadio();
+            abstainButton.ButtonName = country;
+            abstainButton.Text = "Abstain";
+            abstainButton.Anchor = AnchorStyles.None;
+            abstainButton.Location = new Point(guiPanel.Location.X = guiPanel.Width / 3);
+
+            ExtendedRadio noButton = new ExtendedRadio();
+            noButton.ButtonName = country;
+            noButton.Text = "Abstain";
+            noButton.Anchor = AnchorStyles.Right;
+            
+
+            guiPanel.Controls.Add(yesButton);
+            guiPanel.Controls.Add(abstainButton);
+            guiPanel.Controls.Add(noButton);
+            tablePanel
 
         }
+        private void LoadCountry(string country, int v, int countrynumber)
+        {
+            Panel guiPanel = new Panel()
+            {
 
-        #endregion
+            }
+        }
 
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox6;
+
     }
 }
 
