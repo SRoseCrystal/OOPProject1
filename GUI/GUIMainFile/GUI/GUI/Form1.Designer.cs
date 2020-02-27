@@ -28,7 +28,12 @@ namespace Main
             panel.RowCount = nameandvote;
             panel.RowStyles.Clear();
             panel.ColumnStyles.Clear();
-            for (int countrynumber = 27)
+            for (int countrynumber = 27; countrynumber <= countryNumber; countrynumber++)
+            {
+                panel.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+
+                
+            }
 
 
 
@@ -124,7 +129,7 @@ namespace Main
                 Margin = new System.Windows.Forms.Padding(),
                 Dock = System.Windows.Forms.DockStyle.Fill
             };
-            Labal text = new Label
+            Label text = new Label();
 
 
         }

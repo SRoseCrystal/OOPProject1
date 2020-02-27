@@ -17,7 +17,7 @@
             countries[9] = "France";
             countries[10] = "Germany";
             countries[11] = "Greece";
-            countries[12] = "Hungary";
+         
             countries[13] = "Ireland";
             countries[14] = "Italy";
             countries[15] = "Latvia";
