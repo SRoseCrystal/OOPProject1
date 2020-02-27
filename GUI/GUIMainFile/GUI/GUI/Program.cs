@@ -1,16 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Collections.Generic;
-using System.Text;
 using System.Windows.Forms;
 
 namespace Main
 {
-    
+
     static class Program
     {
+        private static bool vote;
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -26,23 +23,24 @@ namespace Main
 
 
         // Below class is for the Unaminity voting rule.
-        static public bool Unaminity(Country[] country)
+        static public bool Unaminity(Countries[] country)
         {
-            foreach (Countries.countries[x] in country) // Iterates through all countries in the arr country 
+            foreach (Countries x in country) // Iterates through all countries in the arr country 
             {
-                if (!x.GetVote()) // Iterates through the Country array checking if the vote it false. 
+                if (x.GetVote()) // Iterates through the Country array checking if the vote it false. 
                 {
-                    return false;
+                    continue;
                 }
+                return false;
             }
             return true;
         }
 
         // Below class is for the Simple Majority voting rule.
-        static public bool Smajority(Countries[] country)
+        static public object Smajority(Countries[] country)
         {
             int votes = 0;
-            foreach (Countries.countries x in country) // Iterates through all countries in the arr country 
+            foreach (Countries x in country) // Iterates through all countries in the arr country 
             {
                 for (x.GetVote())
                 {
@@ -60,10 +58,11 @@ namespace Main
         }
 
         // Below class is for the qualified majority. 
-        static public bool Qmajority(Countries[] country)
+        static public bool Qmajority(countryPop[] country)
         {
             int totalPop = 0;
-            foreach (CountryPop x in country)
+            int countryPop = 0; 
+            foreach (contryPop x in country)
             {
                 if (!x.GetVote()) // Iterates through the Country array checking if the vote it false. 
                 {
@@ -77,6 +76,7 @@ namespace Main
             return true;
         }
 
-    }
+        
 
+    }
 }
