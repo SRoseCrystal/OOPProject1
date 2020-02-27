@@ -5,6 +5,11 @@ namespace Main
 {
     public partial class Form1
     {
+        public Form1()
+        {
+            InitComp();
+        }
+
 
         private System.ComponentModel.IContainer components = null;
 
@@ -108,6 +113,7 @@ namespace Main
             abstainButton.Name = country;
             abstainButton.Text = "Abstain";
             abstainButton.Anchor = AnchorStyles.None;
+           
             
 
             RadioButton noButton = new RadioButton();

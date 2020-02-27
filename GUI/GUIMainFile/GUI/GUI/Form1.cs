@@ -14,11 +14,7 @@ namespace Main
     public partial class Form1 : Form
     {
         Countries countryFile = new Countries();
-        public Form1()
-        {
-            InitializeComponent();
-        }
-
+        
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -42,16 +38,6 @@ namespace Main
         }
 
 
-        private void InitializeComponent()
-        {
-            this.SuspendLayout();
-            // 
-            // Form1
-            // 
-            this.ClientSize = new System.Drawing.Size(1141, 521);
-            this.Name = "Form1";
-            this.ResumeLayout(false);
 
-        }
     }
 }
