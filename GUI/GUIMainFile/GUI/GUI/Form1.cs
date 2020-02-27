@@ -2,14 +2,12 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.ID;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
-using Newtonsoft.Json;
 
 namespace Main
 {
@@ -23,7 +21,7 @@ namespace Main
 
         private DataTable LoadTable()
         {
-        DataTable countryList = countryFile.Main();
+        DataTable countryList = Countries();
         DataTable countryTable = countryList.Tables("Countries");
         return countryTable;
         }
@@ -33,11 +31,11 @@ namespace Main
             int countryNumber = 27;
             int nameandvote = 2;
             int countrynumber = 0;
-            DataTable file = LoadTable();
+            DataTable table = LoadTable();
             InitTable(tablePanel, countryNumber, nameandvote);
             LoadRules();
             LoadResult();
-            foreach(DataRow dataRow in file.Rows)
+            foreach(DataRow dataRow in table.Rows)
             {
                 string country = dataflow["name"].ToString();
                 if(countrynumber < countryNumber)
