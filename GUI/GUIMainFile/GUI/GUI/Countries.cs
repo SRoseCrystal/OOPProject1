@@ -2,7 +2,7 @@
 {
     internal class Countries
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             object[] countries = new object[26];
             countries[0] = "Austria";

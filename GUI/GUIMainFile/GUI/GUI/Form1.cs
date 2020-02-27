@@ -15,7 +15,7 @@ namespace Main
 {
     public partial class Form1 : Form
     {
-        Countries countries = new Countries();
+        Countries countryFile = new Countries();
         public Form1()
         {
             InitializeComponent();
@@ -23,7 +23,7 @@ namespace Main
 
         private DataTable LoadTable()
         {
-        DataSet countryList = countries
+        DataTable countryList = countryFile.Main();
         DataTable countryTable = countryList.Tables("Countries");
         return countryTable;
         }
