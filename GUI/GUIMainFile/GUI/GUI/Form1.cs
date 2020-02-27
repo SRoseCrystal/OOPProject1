@@ -37,7 +37,7 @@ namespace Main
             LoadResult();
             foreach(DataRow dataRow in table.Rows)
             {
-                string country = dataflow["name"].ToString();
+                string country = dataRow["name"].ToString();
                 if(countrynumber < countryNumber)
                 {
                     LoadCountry(country, 0, countrynumber);
