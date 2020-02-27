@@ -22,7 +22,7 @@ namespace Main
 
 
         }
-        private void InitTable(TableLayoutPanel panel, int countryNumber, int nameandvote)
+        public void InitTable(TableLayoutPanel panel, int countryNumber, int nameandvote)
         {
             panel.ColumnCount = countryNumber;
             panel.RowCount = nameandvote;
@@ -47,7 +47,7 @@ namespace Main
             }
             base.Dispose(disposing);
         }
-        private void LoadRules()
+        public void LoadRules()
         {
             Panel rulesPanel = new Panel()
             {
@@ -91,7 +91,7 @@ namespace Main
             tablePanel.Controls.Add(resultPanel);
 
         }
-        private void LoadButtons(string country, int v, int countrynumber)
+        public void LoadButtons(string country, int v, int countrynumber)
         {
             Panel buttonPanel = new Panel()
             {
@@ -108,7 +108,7 @@ namespace Main
             abstainButton.Name = country;
             abstainButton.Text = "Abstain";
             abstainButton.Anchor = AnchorStyles.None;
-            abstainButton.Location = new Point(buttonPanel.Location.X = buttonPanel.Width / 3);
+            abstainButton.Location = new Point(buttonPanel.Location.X, buttonPanel.Location.X = buttonPanel.Width / 3); 
 
             RadioButton noButton = new RadioButton();
             noButton.Name = country;
@@ -122,7 +122,7 @@ namespace Main
             tablePanel.Controls.Add(buttonPanel, v, countrynumber);
 
         }
-        private void LoadCountry(string country, int v, int countrynumber)
+        public void LoadCountry(string country, int v, int countrynumber)
         {
             Panel countriesPanel = new Panel()
             {
