@@ -17,7 +17,7 @@ namespace Main
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
-            
+
         }
 
 
@@ -61,8 +61,8 @@ namespace Main
         static public bool Qmajority(countryPop[] country)
         {
             int totalPop = 0;
-            int countryPop = 0; 
-            foreach (contryPop x in country)
+            int countryPop = 0;
+            foreach (countryPop x in country)
             {
                 if (!x.GetVote()) // Iterates through the Country array checking if the vote it false. 
                 {
@@ -76,7 +76,7 @@ namespace Main
             return true;
         }
 
-        
+
 
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace Main
+﻿using System;
+
+namespace Main
 {
     internal class Countries
     {
@@ -66,6 +68,11 @@
             // This stores the countries and populations for ecah country 
             // The population exactly correlate with the countries 
 
+        }
+
+        internal object GetVote()
+        {
+            throw new NotImplementedException();
         }
     }
 }
