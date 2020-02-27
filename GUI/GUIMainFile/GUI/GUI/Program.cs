@@ -26,9 +26,9 @@ namespace Main
 
 
         // Below class is for the Unaminity voting rule.
-        static public bool Unaminity(Countries[] country)
+        static public bool Unaminity(Country[] country)
         {
-            foreach (Countries.countries x in country) // Iterates through all countries in the arr country 
+            foreach (Countries.countries[x] in country) // Iterates through all countries in the arr country 
             {
                 if (!x.GetVote()) // Iterates through the Country array checking if the vote it false. 
                 {
