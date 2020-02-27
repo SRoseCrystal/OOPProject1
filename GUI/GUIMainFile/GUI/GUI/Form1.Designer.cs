@@ -108,7 +108,7 @@ namespace Main
             abstainButton.Name = country;
             abstainButton.Text = "Abstain";
             abstainButton.Anchor = AnchorStyles.None;
-            abstainButton.Location = new Point(buttonPanel.Location.X, buttonPanel.Location.X = buttonPanel.Width / 3); 
+            
 
             RadioButton noButton = new RadioButton();
             noButton.Name = country;
