@@ -19,23 +19,17 @@ namespace Main
             InitializeComponent();
         }
 
-        private DataTable LoadTable()
-        {
-        DataTable countryList = Countries();
-        DataTable countryTable = countryList.Tables("Countries");
-        return countryTable;
-        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             Text = "EU Council Voting Calculator";
             int countryNumber = 27;
             int nameandvote = 2;
             int countrynumber = 0;
-            DataTable table = LoadTable();
             InitTable(tablePanel, countryNumber, nameandvote);
             LoadRules();
             LoadResult();
-            foreach(DataRow dataRow in table.Rows)
+            foreach(DataRow dataRow in Countries.countries)
             {
                 string country = dataRow["name"].ToString();
                 if(countrynumber < countryNumber)

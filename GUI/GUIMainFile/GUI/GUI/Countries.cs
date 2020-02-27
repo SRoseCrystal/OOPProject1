@@ -2,9 +2,11 @@
 {
     internal class Countries
     {
+        public static object[] countries = new object[26];
+        public static object[] population = new object[26];
         public static void Main(string[] args)
         {
-            object[] countries = new object[26];
+            
             countries[0] = "Austria";
             countries[1] = "Belgium";
             countries[2] = "Bulgaria";
@@ -33,7 +35,7 @@
             countries[25] = "Spain";
             countries[26] = "Sweden";
 
-            object[] population = new object[26];
+            
             population[0] = 1.98;
             population[1] = 2.56;
             population[2] = 1.56;
