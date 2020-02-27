@@ -130,7 +130,10 @@ namespace Main
                 Dock = System.Windows.Forms.DockStyle.Fill
             };
             Label text = new Label();
+            text.Name = country;
+            text.Anchor = AnchorStyles.Left;
 
+                text.Text = country + "" + Countries.population;
 
         }
 
